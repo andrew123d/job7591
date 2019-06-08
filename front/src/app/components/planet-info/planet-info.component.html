@@ -1,0 +1,110 @@
+<div *ngIf="dataComplete" class="row section">
+    <div class="col-xs-12">
+      <div class="row">
+          <div class="col-md-1 col-xs-12">
+            <button type="button" class="btn btn-primary" (click)="returnToHome()">
+              Back
+            </button>
+          </div>
+        <div class="col-md-11 col-xs-12">
+          <div class="row">
+            <div class="col-xs-12 col-md-12">
+              <h1>{{planetData.name}}</h1>
+            </div>
+            
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-md-5">
+              <figure>
+                  <img src="./assets/planet.jpg" class="card-img-top" alt="{{planetData.name}}">
+                <figcaption>
+                  <p>{{planetData.name}}</p>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="col-xs-12 col-md-7">
+              <table class="table">
+                <tr>
+                  <th>Title</th>
+                  <th>Value</th>
+                </tr>
+                <tr>
+                  <td>
+                    <p><b>Rotation period:</b> </p>
+                  </td>
+                  <td>
+                      <p>{{planetData.rotation_period}}</p>
+                  </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><b>Orbital period:</b> </p>
+                    </td>
+                    <td>
+                        <p>{{planetData.orbital_period}}</p>
+                    </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p><b>Diameter:</b> </p>
+                  </td>
+                  <td>
+                      <p>{{planetData.diameter}}</p>
+                  </td>
+                </tr>
+                <tr>
+                    <td>
+                      <p><b>Climate:</b> </p>
+                    </td>
+                  <td>
+                      <p>{{planetData.climate}}</p>
+                  </td>
+                </tr>  
+                <tr>
+                    <td>
+                      <p><b>Gravity:</b></p>
+                    </td>
+                  <td>
+                      <p>{{planetData.gravity}}</p>
+                  </td>
+                </tr> 
+                <tr>
+                    <td>
+                      <p><b>Terrain: </b></p>
+                    </td>
+                  <td>
+                      <p>{{planetData.terrain}}</p>
+                  </td>
+                </tr>
+                <tr>
+                    <td>
+                      <p><b>Surface water: </b></p>
+                    </td>
+                  <td>
+                      <p>{{planetData.surface_water}}</p>
+                  </td>
+                </tr>  
+                <tr>
+                    <td>
+                      <p><b>Population: </b></p>
+                    </td>
+                  <td>
+                      <p>{{planetData.population}}</p>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+</div>
+  
+<div *ngIf="!dataComplete" class="not-ready">
+  <div class="not-ready__container">
+    <div class="spinner-border text-warning" role="status">
+      <span class="sr-only">Loading... please waite</span>
+    </div>
+  </div>
+</div>
